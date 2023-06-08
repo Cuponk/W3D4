@@ -1,5 +1,4 @@
 require_relative "tile"
-
 class Board
   def self.empty_grid
     Array.new(9) do
@@ -28,10 +27,18 @@ class Board
 
   def []=(pos, value)
     x, y = pos
+    puts 'x = #{x}'
+    p y
+    puts
+    p pos
+    puts
+    p value
+    puts
     tile = grid[x][y]
     tile.value = value
   end
 
+  
   def columns
     rows.transpose
   end
